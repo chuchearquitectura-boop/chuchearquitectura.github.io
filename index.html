@@ -1,0 +1,1266 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#3a312b" />
+<meta name="description" content="CHUCHE Arquitectura · Atlas editorial. Diseñando el presente, habitando el futuro. Arquitectura, territorio y confianza documentada." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="CHUCHE Arquitectura · Atlas Vol. I · 2026" />
+<meta property="og:description" content="Diseñando el presente, habitando el futuro. Atlas editorial: arquitectura, territorio y documentación." />
+<meta property="og:image" content="assets/img/og-cover.jpg" />
+<meta property="og:locale" content="es_MX" />
+<title>CHUCHE Arquitectura · Atlas Vol. I · 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@300;400&display=swap">
+
+<style>
+:root{
+  /* PALETA 2026 — CHUCHE Arquitectura (hex exactos del brand board) */
+  --cloud:#f0eee9;          /* Cloud Dancer — luz, aire, silencio */
+  --paper:#e5ded2;          /* Arena Blanca — cal, suavidad, atmósfera */
+  --bone:#ddd3c2;
+  --sand:#d6c4b7;           /* Arena Piedra Rosa — materia, yeso, tierra clara */
+  --arena-rosa:#d6c4b7;
+  --stone:#bcab95;
+  --mocha:#8a6f5a;
+  --terracotta:#cfa894;     /* Terracota Calcárea — barro, memoria, acento cultural */
+  --terra-ink:#a06b4c;      /* terracota oscura — acentos de texto (escala cromática) */
+  --burnt:#9a6a4e;
+  --charcoal:#463d35;
+  --ink:#3a312b;            /* Negro Cálido — tinta, sombra, contraste */
+  --sage:#6f7148;           /* Verde Mineral Sage — paisaje, cartografía, equilibrio */
+  --sage-light:#8a8c66;
+  --sage-deep:#565b39;
+  --olive:#6f7148;
+  --dry:#94986e;
+  --verde-mineral:#3e998d;
+  --folio-dark:#211e1a;
+  --cubierta:#353d2c;       /* Verde mineral oscuro — portadas tipo Atlas Territorial */
+  --line:rgba(58,49,43,.18);
+  --line-soft:rgba(58,49,43,.10);
+  --line-faint:rgba(58,49,43,.06);
+  --on-dark:rgba(240,238,233,.86);
+  --on-dark-soft:rgba(240,238,233,.62);
+
+  --display:'Lora', Georgia, serif;
+  --sans:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --mono:'Roboto Mono', 'SF Mono', Consolas, monospace;
+  --text:'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cloud);color:var(--ink);font-family:var(--text);font-weight:400;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+img,svg{max-width:100%;display:block}
+
+body::before{content:'';position:fixed;inset:0;background-image:url("assets/textures/paper-grain.svg");background-size:220px 220px;opacity:.08;mix-blend-mode:multiply;pointer-events:none;z-index:1}
+body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 30% 20%, rgba(163,130,106,.04) 0%, transparent 60%),radial-gradient(ellipse at 80% 80%, rgba(58,49,43,.06) 0%, transparent 55%);pointer-events:none;z-index:1}
+header,main,footer{position:relative;z-index:2}
+
+.eyebrow{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--mocha)}
+.section-num{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.08em;color:var(--terra-ink)}
+.tech{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.04em;color:var(--ink)}
+.caption{font-family:var(--sans);font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--mocha)}
+.display{font-family:var(--display);font-weight:400;letter-spacing:-.01em;line-height:1.05;color:var(--ink)}
+
+/* Logo */
+.brand-logo{width:30px;height:30px;color:var(--sage);flex-shrink:0;display:block}
+.brand-logo svg, .brand-logo img{display:block;width:100%;height:100%}
+
+/* Texturas */
+.has-contours{position:relative}
+.has-contours .contour-layer{position:absolute;inset:0;background-image:url("assets/textures/topographic.svg");background-size:1440px 680px;background-position:center;opacity:.18;mix-blend-mode:multiply;pointer-events:none;z-index:0}
+.has-contours > *{position:relative;z-index:1}
+
+.solar-arc{position:absolute;width:520px;height:520px;border-radius:50%;border:1px solid currentColor;opacity:.16;pointer-events:none;color:var(--mocha)}
+.solar-arc.terra{color:var(--terra-ink);opacity:.20}
+.solar-arc.sage-c{color:var(--sage);opacity:.18}
+.solar-arc.r-top{right:-220px;top:-220px}
+.solar-arc.r-mid{right:-260px;top:50%;transform:translateY(-50%)}
+.solar-arc.l-mid{left:-260px;top:50%;transform:translateY(-50%)}
+.solar-arc.r-bot{right:-200px;bottom:-200px}
+
+.plate{position:relative}
+.plate::before,.plate::after{content:'';position:absolute;width:18px;height:18px;border:1px solid var(--cloud);pointer-events:none;z-index:3;opacity:.85}
+.plate::before{top:14px;left:14px;border-right:none;border-bottom:none}
+.plate::after{bottom:14px;right:14px;border-left:none;border-top:none}
+
+.lamina-grid::before{content:'';position:absolute;inset:0;background-image:linear-gradient(to right, var(--line-faint) 1px, transparent 1px),linear-gradient(to bottom, var(--line-faint) 1px, transparent 1px);background-size:80px 80px;pointer-events:none;opacity:.6;z-index:0}
+.lamina-grid > *{position:relative;z-index:1}
+
+.compass{position:absolute;width:42px;height:42px;pointer-events:none}
+.compass::before{content:'';position:absolute;inset:0;border:1px solid var(--mocha);border-radius:50%;opacity:.5}
+.compass::after{content:'N';position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9px;color:var(--mocha);letter-spacing:.06em}
+.compass-cross{position:absolute;top:50%;left:50%;width:30px;height:30px;transform:translate(-50%,-50%);border-top:1px solid var(--mocha);border-left:1px solid var(--mocha);opacity:.45}
+.compass-cross::after{content:'';position:absolute;top:50%;left:50%;width:30px;height:30px;transform:translate(-50%,-50%) rotate(45deg);border-top:1px dashed var(--mocha);opacity:.5}
+
+/* RETÍCULA CULTURAL — frieze sutil (isólogo 03) */
+.arches-grid{position:relative;height:80px;background-image:url("assets/brand/pattern-arches-grid.svg");background-repeat:repeat-x;background-size:480px 80px;background-position:center;opacity:.7;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+
+/* Topografía sobre fondo verde mineral oscuro */
+.has-topo-dark{position:relative}
+.has-topo-dark .topo-layer{position:absolute;inset:0;background-image:url("assets/textures/topographic.svg");background-size:1440px 680px;background-position:center;opacity:.22;mix-blend-mode:screen;pointer-events:none;z-index:0;filter:invert(.92)}
+.has-topo-dark > *{position:relative;z-index:1}
+
+/* PATRÓN ARQUITECTÓNICO 6 tiles — solo como acento editorial */
+.pattern-band{height:140px;background-image:url("assets/textures/pattern-band.svg");background-repeat:repeat-x;background-size:720px 140px;background-position:left center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;width:100%;max-width:100%}
+
+/* TOPBAR */
+header.topbar{position:sticky;top:0;width:100%;z-index:30;background:rgba(240,238,233,.86);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.topbar-inner{max-width:1480px;margin:0 auto;padding:18px 36px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-name{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--ink);line-height:1.1}
+.brand-name span{font-weight:300;letter-spacing:.28em;display:block;font-size:9.5px;color:var(--mocha)}
+nav.menu{display:flex;justify-content:center;gap:24px}
+nav.menu a{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--charcoal);transition:color .2s ease}
+nav.menu a:hover{color:var(--terra-ink)}
+.topbar-contact{display:flex;align-items:center;gap:18px}
+.topbar-contact a{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.topbar-contact .pill{padding:8px 14px;border:1px solid var(--ink);border-radius:999px;transition:background .2s,color .2s}
+.topbar-contact .pill:hover{background:var(--ink);color:var(--cloud)}
+
+/* HERO */
+.hero{position:relative;min-height:96vh;background:var(--cloud);overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-image{position:absolute;inset:0;background:url("assets/img/04-usos-mixtos.jpg") center/cover no-repeat;filter:contrast(1.04) saturate(.62) brightness(.78)}
+.hero-image::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(58,49,43,.18) 0%, transparent 25%, rgba(58,49,43,.55) 100%), linear-gradient(90deg, rgba(58,49,43,.32) 0%, transparent 50%)}
+.hero-edition{position:absolute;top:0;left:0;right:0;padding:28px 40px;display:flex;justify-content:space-between;z-index:2;color:var(--cloud)}
+.hero-edition .tech{color:var(--cloud);opacity:.92}
+.hero-coords{position:absolute;top:50%;right:36px;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--cloud);opacity:.55;z-index:2}
+.hero-content{position:absolute;bottom:0;left:0;padding:0 40px 64px;width:100%;z-index:2;color:var(--cloud)}
+.hero-eyebrow{font-family:var(--sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--cloud);opacity:.85;margin-bottom:22px}
+.hero-tagline{font-family:var(--display);font-style:italic;font-size:clamp(15px,1.6vw,18px);color:var(--sand);margin:0 0 18px;letter-spacing:.005em}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(40px, 6.6vw, 96px);line-height:1.02;letter-spacing:-.015em;color:var(--cloud);max-width:1080px;margin:0 0 28px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--sand)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:36px;align-items:end;margin-top:8px}
+.hero-byline{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--cloud)}
+.hero-byline span{color:var(--sand);font-weight:400}
+.hero-right{display:flex;gap:32px;align-items:flex-end;margin-left:auto}
+.hero-stats{display:flex;gap:28px;align-items:flex-end}
+.hero-stat{display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.hero-stat .num{font-family:var(--display);font-size:28px;font-weight:500;line-height:1;color:var(--cloud)}
+.hero-stat .lbl{font-family:var(--sans);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--cloud);opacity:.78}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--cloud);color:var(--ink);padding:14px 22px;font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;flex-shrink:0;align-self:flex-end}
+.hero-cta:hover{background:var(--terracotta);color:var(--cloud)}
+.hero-rule{position:absolute;left:40px;right:40px;bottom:48px;height:1px;background:rgba(240,238,233,.22);z-index:2}
+
+section{position:relative}
+.shell{max-width:1480px;margin:0 auto;padding:0 36px}
+.section-head{display:flex;align-items:baseline;gap:18px;padding-top:96px;padding-bottom:24px}
+.section-rule{flex:1;height:1px;background:var(--line);margin-bottom:6px}
+
+/* §01 STATEMENT */
+.statement-section{background:var(--cloud);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.statement-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;padding:120px 0 130px;align-items:start;position:relative;z-index:2}
+.statement-meta .tech{display:block;margin-bottom:8px}
+.statement-meta .caption{display:block;margin-top:14px}
+.statement-body{max-width:780px}
+.statement-body .display{font-size:clamp(28px,3.6vw,46px);line-height:1.15;margin:0 0 32px}
+.statement-body .display em{font-style:italic;color:var(--terra-ink);font-weight:500}
+.statement-tail{margin-top:36px;font-family:var(--text);font-size:14px;line-height:1.7;color:var(--charcoal);max-width:640px}
+
+/* §02 ESENCIA */
+.esencia{background:var(--paper);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.esencia-head{margin-bottom:48px;max-width:560px;position:relative;z-index:2}
+.esencia-head h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.6vw,52px);line-height:1.06;letter-spacing:-.01em;margin:14px 0 18px;color:var(--ink)}
+.esencia-head p{font-family:var(--text);font-size:15px;line-height:1.65;color:var(--charcoal);margin:0}
+.esencia-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:48px;padding-bottom:104px;position:relative;z-index:2}
+.pillar{display:flex;flex-direction:column;gap:22px}
+.pillar-icon{width:74px;height:74px;color:var(--ink)}
+.pillar-icon img,.pillar-icon svg{display:block;width:100%;height:100%}
+.pillar-tag{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ink)}
+.pillar-body{font-family:var(--display);font-size:20px;line-height:1.32;color:var(--charcoal);margin:0;font-style:italic;font-weight:400}
+.pillar.center{padding-top:36px}
+.pillar.right{padding-top:72px}
+
+/* §03 CAPAS */
+.capas{background:var(--cloud);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.capas-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:28px;padding:64px 0 112px;position:relative;z-index:2}
+.capa{display:flex;flex-direction:column;gap:18px;position:relative;padding-top:24px}
+.capa::before{content:'';display:block;height:1px;width:46px;background:var(--ink);margin-bottom:6px}
+.capa-tag{font-family:var(--mono);font-size:11px;color:var(--mocha);letter-spacing:.05em}
+.capa-name{font-family:var(--display);font-size:clamp(28px,3vw,38px);font-weight:500;line-height:1.05;color:var(--ink);letter-spacing:-.01em}
+.capa-body{font-family:var(--text);font-size:14.5px;line-height:1.65;color:var(--charcoal)}
+.capa.k1{grid-column:1 / span 4;margin-top:32px}
+.capa.k2{grid-column:5 / span 4;margin-top:96px}
+.capa.k3{grid-column:9 / span 4;margin-top:160px}
+
+/* §04 LAB */
+.lab{background:var(--cloud);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.lab-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:40px;position:relative;z-index:2}
+.lab-head h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,5vw,62px);line-height:1.02;letter-spacing:-.01em;margin:0;color:var(--ink)}
+.lab-intro{font-family:var(--text);font-size:15px;line-height:1.65;color:var(--charcoal);max-width:480px}
+.lab-frame{position:relative;display:grid;grid-template-columns:.32fr 1.4fr .42fr;gap:36px;padding-bottom:104px;z-index:2}
+.lab-side{display:flex;flex-direction:column;gap:24px;padding-top:8px}
+.lab-layer{display:flex;flex-direction:column;gap:6px;padding-bottom:18px;border-bottom:1px solid var(--line-soft)}
+.lab-layer .tech{color:var(--terra-ink)}
+.lab-layer-name{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.lab-layer-desc{font-family:var(--text);font-size:12.5px;line-height:1.5;color:var(--charcoal)}
+.lab-image-wrap{position:relative;min-height:520px;overflow:hidden;background:var(--ink)}
+.lab-image{position:absolute;inset:0;background:url("assets/img/02-estudio-hidrico.jpg") center/cover no-repeat;filter:contrast(1.04) saturate(.72) brightness(.92)}
+.lab-image::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(58,49,43,0) 60%, rgba(58,49,43,.45) 100%)}
+.lab-image-overlay{position:absolute;left:24px;right:24px;bottom:22px;display:flex;justify-content:space-between;align-items:end;color:var(--cloud);z-index:2;gap:24px}
+.lab-image-overlay .tech{color:var(--cloud);opacity:.88}
+.lab-image-title{font-family:var(--display);font-size:30px;font-weight:500;letter-spacing:-.01em;line-height:1}
+.lab-image-coords{text-align:right;font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--cloud);opacity:.85}
+.lab-data{display:flex;flex-direction:column;gap:0;padding-top:8px}
+.lab-row{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:14px 0;border-bottom:1px dotted var(--line);align-items:baseline}
+.lab-row .lab-k{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mocha)}
+.lab-row .lab-v{font-family:var(--display);font-size:15px;font-weight:500;color:var(--ink);text-align:right}
+.scale-bar{display:flex;align-items:center;gap:10px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.scale-tick{height:8px;width:1px;background:var(--ink)}
+.scale-bar .tech{margin-left:auto}
+.scale-line{flex:1;height:1px;background:var(--ink)}
+
+/* §06 FOLIO */
+.folio{background:var(--folio-dark);color:var(--cloud);border-bottom:1px solid rgba(240,238,233,.12);position:relative;overflow:hidden}
+.folio .section-rule{background:rgba(240,238,233,.2)}
+.folio .section-num{color:var(--mocha)}
+.folio .eyebrow{color:var(--mocha)}
+.folio-intro{display:grid;grid-template-columns:.85fr 1fr;gap:48px;margin-bottom:48px;align-items:end;position:relative;z-index:2}
+.folio-intro h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,5.4vw,64px);line-height:1.02;letter-spacing:-.01em;color:var(--cloud);margin:0}
+.folio-intro p{font-family:var(--text);font-size:15px;line-height:1.65;color:var(--on-dark);max-width:540px;margin:0}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;padding-bottom:112px;position:relative;z-index:2}
+.piece{position:relative;background:var(--charcoal);overflow:hidden}
+.piece-img{width:100%;height:100%;position:absolute;inset:0;background-size:cover;background-position:center;filter:contrast(1.04) saturate(.78) brightness(.92);transition:filter .5s ease,transform .8s ease}
+.piece:hover .piece-img{filter:contrast(1.05) saturate(.95) brightness(1);transform:scale(1.03)}
+.piece-grad{position:absolute;inset:0;background:linear-gradient(180deg, rgba(58,49,43,.0) 50%, rgba(58,49,43,.78) 100%);z-index:1}
+.piece-meta{position:absolute;top:14px;left:16px;font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--cloud);opacity:.82;z-index:2}
+.piece-info{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;color:var(--cloud)}
+.piece-info h3{font-family:var(--display);font-weight:500;font-size:22px;line-height:1.1;margin:0 0 6px;letter-spacing:-.01em}
+.piece-info p{font-family:var(--sans);font-size:10.5px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-soft);margin:0}
+.piece.p1{grid-column:1 / span 8;height:420px}
+.piece.p2{grid-column:9 / span 4;height:420px}
+.piece.p3{grid-column:1 / span 5;height:400px}
+.piece.p3 .piece-img{background-position:center 18%;filter:brightness(1.15) contrast(.85) saturate(1.1) !important}
+.piece.p3 .piece-grad{background:linear-gradient(180deg, rgba(33,30,26,.0) 0%, rgba(33,30,26,.70) 60%, rgba(33,30,26,.88) 100%) !important}
+.piece.p4{grid-column:6 / span 7;height:480px}
+.piece.p5{grid-column:1 / span 4;height:320px}
+.piece.p6{grid-column:5 / span 4;height:320px}
+.piece.p7{grid-column:9 / span 4;height:320px}
+.piece.p8{grid-column:1 / span 7;height:380px}
+.piece.p9{grid-column:8 / span 5;height:380px}
+.piece.p10{grid-column:1 / span 4;height:340px}
+.piece.p11{grid-column:5 / span 4;height:340px}
+.piece.p12{grid-column:9 / span 4;height:340px}
+.piece.p13{grid-column:1 / span 6;height:400px}
+.piece.p14{grid-column:7 / span 6;height:400px}
+
+/* §07 DOCS */
+.docs{background:var(--cloud);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.docs-head{display:grid;grid-template-columns:.85fr 1fr;gap:48px;margin-bottom:56px;align-items:end;position:relative;z-index:2}
+.docs-head h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,5.4vw,62px);line-height:1.02;letter-spacing:-.01em;margin:0}
+.docs-head p{font-family:var(--text);font-size:15px;line-height:1.65;color:var(--charcoal);max-width:540px;margin:0}
+.docs-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;padding-bottom:104px;position:relative;z-index:2}
+.sys{padding:20px 0 24px;border-top:1px solid var(--ink);display:flex;flex-direction:column;gap:10px}
+.sys-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.sys-num{font-family:var(--display);font-weight:500;font-size:36px;line-height:1;color:var(--terra-ink);letter-spacing:-.02em}
+.sys-tag{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--mocha);text-transform:uppercase}
+.sys h3{font-family:var(--display);font-size:19px;font-weight:500;margin:4px 0 4px;letter-spacing:-.005em}
+.sys p{font-family:var(--text);font-size:13px;line-height:1.55;color:var(--charcoal);margin:0}
+.sys code{font-family:var(--mono);font-size:11.5px;background:rgba(58,49,43,.06);padding:1px 4px}
+.sys.s1,.sys.s4{grid-column:1 / span 4}
+.sys.s2,.sys.s5{grid-column:5 / span 4}
+.sys.s3,.sys.s6{grid-column:9 / span 4}
+
+/* §06 SERVICIOS */
+.servicios{background:var(--cloud);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.servicios-head{margin-bottom:48px;max-width:560px;position:relative;z-index:2}
+.servicios-head h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.6vw,52px);line-height:1.06;letter-spacing:-.01em;margin:14px 0 0;color:var(--ink)}
+.servicios-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink);position:relative;z-index:2;padding-bottom:0;margin-bottom:104px}
+.servicio{padding:30px 28px 36px;display:flex;flex-direction:column;gap:10px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.servicio:nth-child(3n){border-right:none}
+.servicio:nth-last-child(-n+3){border-bottom:none}
+.servicio .serv-num{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--terra-ink)}
+.servicio h3{font-family:var(--display);font-weight:500;font-size:22px;line-height:1.1;margin:6px 0 4px;color:var(--ink);letter-spacing:-.005em}
+.servicio p{font-family:var(--text);font-size:13px;line-height:1.55;color:var(--charcoal);margin:0}
+
+/* §08 MÉTODO */
+.metodo{background:var(--paper);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.metodo-head{margin-bottom:40px;max-width:720px;position:relative;z-index:2}
+.metodo-head h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.8vw,52px);line-height:1.05;margin:0 0 18px;letter-spacing:-.01em}
+.metodo-head p{font-family:var(--text);font-size:15px;line-height:1.65;color:var(--charcoal);margin:0;max-width:560px}
+.metodo-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-bottom:104px;position:relative;z-index:2;background:var(--paper)}
+.paso{padding:30px 22px 36px;display:flex;flex-direction:column;gap:10px;border-right:1px solid var(--line-soft);position:relative}
+.paso:last-child{border-right:none}
+.paso-num{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--terra-ink)}
+.paso h4{font-family:var(--display);font-weight:500;font-size:22px;line-height:1;margin:6px 0 4px;color:var(--ink);letter-spacing:-.005em}
+.paso p{font-family:var(--text);font-size:12.5px;line-height:1.55;color:var(--charcoal);margin:0}
+
+/* §09 CITA */
+.final-statement{background:var(--cubierta);color:var(--cloud);border-bottom:1px solid rgba(240,238,233,.10);padding:140px 0;position:relative;overflow:hidden}
+.final-statement .shell{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;position:relative;z-index:2}
+.final-statement .eyebrow{color:var(--mocha)}
+.final-statement .section-num{color:var(--mocha)}
+.final-blockquote{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(28px,4.2vw,54px);line-height:1.18;letter-spacing:-.01em;color:var(--cloud);margin:0;position:relative;padding-left:24px}
+.final-blockquote::before{content:'';position:absolute;left:0;top:.45em;bottom:.35em;width:1px;background:var(--terracotta)}
+.final-attr{margin-top:30px;padding-left:24px;font-family:var(--sans);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--sand)}
+
+/* §10 CONTACTO */
+.contacto{background:var(--cloud);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:48px 0 130px;align-items:start;position:relative;z-index:2}
+.contacto-left h2{font-family:var(--display);font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-.015em;margin:18px 0 24px}
+.contacto-left p{font-family:var(--text);font-size:15px;line-height:1.65;color:var(--charcoal);max-width:440px;margin:0 0 24px}
+.contacto-loc{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--mocha);text-transform:uppercase}
+.contacto-right{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--ink);margin-top:14px}
+.contact-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding:24px 4px;border-bottom:1px solid var(--line);transition:background .2s ease}
+.contact-row:hover{background:var(--paper)}
+.contact-row .lbl{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--mocha)}
+.contact-row .val{font-family:var(--display);font-size:22px;font-weight:500;color:var(--ink);letter-spacing:-.005em}
+.contact-row .arrow{font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--terra-ink);transition:transform .25s ease}
+.contact-row:hover .arrow{transform:translateX(4px)}
+
+/* COLOFÓN */
+footer.colofon{background:var(--cubierta);color:var(--on-dark);padding:48px 36px;position:relative}
+.colofon-inner{max-width:1480px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center}
+.colofon-mark{display:flex;align-items:center;gap:12px}
+.colofon-mark .brand-logo{color:var(--sand)}
+.colofon-mark .brand-name{color:var(--cloud)}
+.colofon-mark .brand-name span{color:var(--sand)}
+.colofon-center{text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--on-dark-soft)}
+.colofon-right{font-family:var(--sans);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--on-dark-soft)}
+
+/* TABLET */
+@media (max-width:1180px){
+  .shell{padding:0 28px}
+  .topbar-inner{padding:16px 28px}
+  .hero-content{padding:0 28px 56px}
+  .hero-edition{padding:24px 28px}
+  .hero-cta{right:28px;bottom:56px}
+  .hero-rule{left:28px;right:28px}
+  .statement-grid{grid-template-columns:1fr;gap:24px;padding:96px 0 100px}
+  .esencia-grid{grid-template-columns:1fr;gap:36px}
+  .pillar.center,.pillar.right{padding-top:0}
+  .capas-grid{gap:20px}
+  .capa.k1,.capa.k2,.capa.k3{grid-column:1 / span 12;margin-top:0}
+  .lab-head{grid-template-columns:1fr;gap:20px}
+  .lab-frame{grid-template-columns:1fr;gap:32px}
+  .lab-image-wrap{min-height:380px}
+  .folio-intro{grid-template-columns:1fr;gap:20px}
+  .mosaic{grid-template-columns:repeat(6,1fr);gap:14px}
+  .piece.p1{grid-column:1 / span 6;height:360px}
+  .piece.p2{grid-column:1 / span 6;height:300px}
+  .piece.p3{grid-column:1 / span 3;height:260px}
+  .piece.p4{grid-column:4 / span 3;height:260px}
+  .piece.p5{grid-column:1 / span 3;height:260px}
+  .piece.p6{grid-column:4 / span 3;height:260px}
+  .piece.p7{grid-column:1 / span 6;height:340px}
+  .piece.p8{grid-column:1 / span 3;height:260px}
+  .piece.p9{grid-column:4 / span 3;height:260px}
+  .piece.p10{grid-column:1 / span 3;height:260px}
+  .piece.p11{grid-column:4 / span 3;height:260px}
+  .piece.p12{grid-column:1 / span 6;height:320px}
+  .docs-head{grid-template-columns:1fr;gap:18px}
+  .docs-grid{grid-template-columns:repeat(6,1fr)}
+  .sys.s1,.sys.s2,.sys.s3,.sys.s4,.sys.s5,.sys.s6{grid-column:span 3}
+  .servicios-grid{grid-template-columns:repeat(2,1fr)}
+  .servicio:nth-child(2n){border-right:none}
+  .servicio:nth-child(2n+1){border-right:1px solid var(--line-soft)}
+  .servicio:nth-last-child(-n+3){border-bottom:1px solid var(--line-soft)}
+  .servicio:nth-last-child(-n+2){border-bottom:none}
+  .metodo-grid{grid-template-columns:repeat(3,1fr)}
+  .paso{border-bottom:1px solid var(--line-soft)}
+  .final-statement .shell{grid-template-columns:1fr;gap:32px}
+  .contacto-grid{grid-template-columns:1fr;gap:24px;padding:32px 0 88px}
+  .solar-arc.r-top,.solar-arc.r-bot{opacity:.12}
+}
+
+/* MOBILE */
+@media (max-width:720px){
+  body{font-size:14px}
+  .shell{padding:0 22px}
+  .topbar-inner{grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:14px;padding:14px 22px}
+  nav.menu{grid-column:1 / -1;justify-content:flex-start;overflow-x:auto;padding-bottom:2px;scrollbar-width:none;-ms-overflow-style:none}
+  nav.menu::-webkit-scrollbar{display:none}
+  nav.menu a{white-space:nowrap;flex-shrink:0}
+  .topbar-contact{grid-row:1;justify-self:end}
+  .topbar-contact a:not(.pill){display:none}
+  .hero{min-height:88vh}
+  .hero-edition{padding:20px 22px;gap:14px;flex-wrap:wrap}
+  .hero-edition .tech{font-size:9.5px}
+  .hero-coords{display:none}
+  .hero-content{padding:0 22px 36px}
+  .hero h1{font-size:clamp(34px,9vw,56px)}
+  .hero-meta{flex-direction:column;align-items:flex-start;gap:20px}
+  .hero-stats{margin-left:0;gap:18px;flex-wrap:wrap}
+  .hero-stat .num{font-size:24px}
+  .hero-right{flex-direction:column;align-items:flex-start;gap:18px}
+  .hero-cta{margin-top:4px}
+  .hero-rule{display:none}
+  .section-head{padding-top:60px;padding-bottom:18px;gap:10px}
+  .statement-grid{padding:64px 0 70px}
+  .statement-body .display{font-size:24px}
+  .esencia-grid{padding-bottom:72px}
+  .pillar-icon{width:60px;height:60px}
+  .capas-grid{padding:36px 0 72px}
+  .lab-head h2{font-size:28px}
+  .lab-frame{padding-bottom:72px}
+  .lab-image-wrap{min-height:300px}
+  .lab-image-overlay{flex-direction:column;align-items:flex-start;gap:8px}
+  .folio-intro h2{font-size:30px}
+  .mosaic{grid-template-columns:1fr;gap:12px;padding-bottom:72px}
+  .piece.p1,.piece.p2,.piece.p3,.piece.p4,.piece.p5,.piece.p6,.piece.p7,.piece.p8,.piece.p9,.piece.p10,.piece.p11,.piece.p12,.piece.p13,.piece.p14{grid-column:1 / -1;height:260px}
+  .docs-head h2{font-size:28px}
+  .docs-grid{grid-template-columns:1fr;gap:0;padding-bottom:72px}
+  .sys.s1,.sys.s2,.sys.s3,.sys.s4,.sys.s5,.sys.s6{grid-column:1}
+  .servicios-grid{grid-template-columns:1fr}
+  .servicio{border-right:none !important;border-bottom:1px solid var(--line-soft) !important}
+  .servicio:last-child{border-bottom:none !important}
+  .metodo-grid{grid-template-columns:1fr;margin-bottom:72px}
+  .paso{border-right:none;border-bottom:1px solid var(--line-soft)}
+  .paso:last-child{border-bottom:none}
+  .final-statement{padding:80px 0}
+  .final-blockquote{font-size:24px}
+  .contacto-left h2{font-size:36px}
+  .contact-row{grid-template-columns:auto 1fr;gap:14px;padding:18px 4px}
+  .contact-row .arrow{grid-column:2;justify-self:end;font-size:9px}
+  .contact-row .val{font-size:18px}
+  footer.colofon{padding:32px 22px}
+  .colofon-inner{grid-template-columns:1fr;gap:20px;text-align:center}
+  .colofon-mark,.colofon-right{justify-self:center}
+  .colofon-center{order:3}
+  .solar-arc,.compass,.lamina-grid::before{display:none}
+  .pattern-band{height:90px;background-size:540px 90px}
+}
+
+/* =========================================
+   ITP CATEGORÍAS ESTRATÉGICAS
+   ========================================= */
+.itp-cats{
+  border-top:1px solid var(--line);
+  padding:56px 0 104px;
+  position:relative;z-index:2
+}
+.itp-cats-head{
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:40px;
+  align-items:start;
+  margin-bottom:48px
+}
+.itp-cats-head .eyebrow{display:block;margin-bottom:12px}
+.itp-cats-head p{
+  font-family:var(--text);font-size:14px;line-height:1.7;
+  color:var(--charcoal);margin:0
+}
+.itp-cats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border-top:1px solid var(--ink)
+}
+.itp-cat{
+  padding:24px 24px 32px;
+  border-right:1px solid var(--line-soft);
+  display:flex;flex-direction:column;gap:10px;
+  transition:background .22s ease
+}
+.itp-cat:last-child{border-right:none}
+.itp-cat:hover{background:rgba(207,168,148,.08)}
+.itp-cat-num{
+  font-family:var(--display);font-size:36px;font-weight:500;
+  color:var(--terra-ink);line-height:1;letter-spacing:-.03em
+}
+.itp-cat-name{
+  font-family:var(--sans);font-size:11px;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink)
+}
+.itp-cat p{
+  font-family:var(--text);font-size:13px;line-height:1.6;
+  color:var(--charcoal);margin:0
+}
+
+/* Servicios sub-header */
+.servicios-sub{
+  font-family:var(--text);font-size:14px;line-height:1.7;
+  color:var(--charcoal);max-width:620px;margin:16px 0 0
+}
+/* Layer dividers */
+.serv-layer{
+  border-top:1px solid var(--line);
+  padding:14px 0 0;
+  margin-bottom:0;
+  position:relative;z-index:2
+}
+.serv-layer-tag{
+  font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+  color:var(--mocha);text-transform:uppercase
+}
+/* 1-column service grid variant */
+.servicios-grid--1col{
+  grid-template-columns:1fr !important;
+}
+/* Featured service */
+.servicio--featured{
+  background:var(--paper);
+  border-bottom:1px solid var(--line-soft) !important;
+}
+.servicio--featured h3{font-size:26px}
+.servicio--featured p{max-width:760px;font-size:14px;line-height:1.7}
+
+@media(max-width:1180px){
+  .itp-cats-head{grid-template-columns:1fr;gap:16px}
+  .itp-cats-grid{grid-template-columns:repeat(2,1fr)}
+  .itp-cat:nth-child(2){border-right:none}
+  .itp-cat:nth-child(3){border-top:1px solid var(--line-soft)}
+  .itp-cat:nth-child(4){border-top:1px solid var(--line-soft);border-right:none}
+}
+@media(max-width:720px){
+  .itp-cats-grid{grid-template-columns:1fr}
+  .itp-cat{border-right:none;border-bottom:1px solid var(--line-soft)}
+  .itp-cat:last-child{border-bottom:none}
+  .itp-cats{padding-bottom:72px}
+}
+
+/* =========================================
+   §08.5 DECISIONES
+   ========================================= */
+.decisiones{background:var(--paper);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.dec-intro{margin-bottom:56px;position:relative;z-index:2}
+.dec-intro h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.6vw,52px);line-height:1.06;letter-spacing:-.01em;margin:14px 0 14px;color:var(--ink)}
+.dec-intro p{font-family:var(--text);font-size:15px;line-height:1.65;color:var(--charcoal);margin:0}
+.dec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink);padding-bottom:104px;position:relative;z-index:2}
+.dec-case{padding:28px 28px 36px;display:flex;flex-direction:column;gap:14px;border-right:1px solid var(--line-soft);transition:background .22s ease}
+.dec-case:last-child{border-right:none}
+.dec-case:hover{background:var(--bone)}
+.dec-case-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.dec-type{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--mocha);text-transform:uppercase}
+.dec-tag{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra-ink)}
+.dec-title{font-family:var(--display);font-size:17px;line-height:1.38;color:var(--ink);margin:0;font-weight:500;letter-spacing:-.005em}
+.dec-outcome{font-family:var(--text);font-size:13px;line-height:1.6;color:var(--charcoal);margin:0;flex:1}
+.dec-meta{display:flex;flex-direction:column;gap:4px;padding-top:14px;border-top:1px dotted var(--line)}
+.dec-meta span{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--mocha)}
+
+@media(max-width:1180px){
+  .dec-grid{grid-template-columns:1fr}
+  .dec-case{border-right:none;border-bottom:1px solid var(--line-soft)}
+  .dec-case:last-child{border-bottom:none}
+}
+
+/* =========================================
+   UX ENHANCEMENTS — micro-interactions & polish
+   ========================================= */
+
+/* Keyboard focus ring */
+:focus-visible{outline:2px solid var(--terra-ink);outline-offset:3px;border-radius:1px}
+
+/* Scrollbar */
+html{scrollbar-width:thin;scrollbar-color:var(--stone) transparent}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--stone);border-radius:3px}
+
+/* Topbar nav links */
+.nav-links a{position:relative}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-2px;width:100%;height:1px;background:var(--terra-ink);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+
+/* CTA button */
+.hero-cta,.cta-primary{transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s ease}
+.hero-cta:hover,.cta-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(58,49,43,.18)}
+.hero-cta:active,.cta-primary:active{transform:translateY(0);box-shadow:none}
+
+/* Folio piece hover — info slides up */
+.piece-info{transform:translateY(6px);transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.piece:hover .piece-info{transform:translateY(0)}
+
+/* ITP category — number nudge on hover */
+.itp-cat{transition:background .3s ease}
+.itp-cat:hover{background:rgba(58,49,43,.04)}
+.itp-cat:hover .itp-cat-num{transform:translateX(5px)}
+.itp-cat-num{transition:transform .3s cubic-bezier(.16,1,.3,1)}
+
+/* Decisiones case — top line reveal */
+.dec-case{position:relative;overflow:hidden}
+.dec-case::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--terra-ink);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.dec-case:hover::before{transform:scaleX(1)}
+
+/* Contact row — left accent bar */
+.contact-row{position:relative;overflow:hidden}
+.contact-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--terra-ink);transform:scaleY(0);transform-origin:bottom;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.contact-row:hover::before{transform:scaleY(1)}
+
+/* Servicios items — subtle lift */
+.servicio{transition:background .25s ease}
+.servicio:hover{background:rgba(58,49,43,.04)}
+
+/* Esencia pillars — row highlight */
+.ep-item{transition:background .3s ease}
+.ep-item:hover{background:rgba(240,238,233,.6)}
+
+/* Folio piece img scale */
+.piece-img{transition:transform .7s cubic-bezier(.16,1,.3,1),filter .7s ease}
+.piece:hover .piece-img{transform:scale(1.03)}
+
+/* =========================================
+   MOTION + REVEAL SYSTEM
+   ========================================= */
+[data-reveal]{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .7s cubic-bezier(0.16,1,0.3,1), transform .7s cubic-bezier(0.16,1,0.3,1);
+}
+[data-reveal].is-visible{opacity:1;transform:none}
+[data-reveal][data-delay="1"]{transition-delay:.1s}
+[data-reveal][data-delay="2"]{transition-delay:.2s}
+[data-reveal][data-delay="3"]{transition-delay:.3s}
+[data-reveal][data-delay="4"]{transition-delay:.4s}
+[data-reveal][data-delay="5"]{transition-delay:.5s}
+[data-reveal][data-delay="6"]{transition-delay:.6s}
+
+/* HERO ENTRANCE — staggered */
+@keyframes fade-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+.hero-eyebrow{animation:fade-in .8s .15s both ease-out}
+.hero-tagline{animation:fade-up .9s .32s both cubic-bezier(.16,1,.3,1)}
+.hero h1{animation:fade-up 1s .5s both cubic-bezier(.16,1,.3,1)}
+.hero-meta{animation:fade-up .8s .72s both cubic-bezier(.16,1,.3,1)}
+.hero-cta{animation:fade-in .6s .95s both ease-out}
+.hero-edition{animation:fade-in 1s .1s both ease-out}
+
+/* PATTERN BAND DRIFT */
+@keyframes band-drift{from{background-position:0 center}to{background-position:720px center}}
+.pattern-band{animation:band-drift 32s linear infinite}
+
+/* TOPBAR — scroll-aware */
+header.topbar{transition:background .3s ease, box-shadow .3s ease}
+header.topbar.scrolled{background:rgba(240,238,233,.97);box-shadow:0 2px 20px rgba(58,49,43,.10)}
+
+/* NAV — underline reveal */
+nav.menu a{position:relative}
+nav.menu a::after{
+  content:'';position:absolute;left:0;bottom:-4px;
+  width:0;height:1px;background:var(--terra-ink);
+  transition:width .28s cubic-bezier(.16,1,.3,1)
+}
+nav.menu a:hover::after{width:100%}
+
+/* =========================================
+   §02 ESENCIA — EDITORIAL LIST
+   (replaces symmetric 3-column card grid)
+   ========================================= */
+.esencia-pillars{padding-bottom:104px;position:relative;z-index:2}
+.ep-item{
+  display:grid;
+  grid-template-columns:64px 1fr 1.6fr;
+  gap:40px;
+  align-items:center;
+  padding:40px 0;
+  border-top:1px solid var(--line);
+  transition:background .25s cubic-bezier(.16,1,.3,1)
+}
+.ep-item:last-child{border-bottom:1px solid var(--line)}
+.ep-num{
+  font-family:var(--display);font-size:52px;font-weight:500;
+  line-height:1;color:var(--terra-ink);letter-spacing:-.04em;
+  text-align:right;flex-shrink:0
+}
+.ep-meta{display:flex;flex-direction:column;gap:6px}
+.ep-icon{width:44px;height:44px;color:var(--ink);margin-bottom:8px}
+.ep-icon img,.ep-icon svg{display:block;width:100%;height:100%}
+.ep-tag{
+  font-family:var(--sans);font-size:11px;font-weight:700;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--ink)
+}
+.ep-body{
+  font-family:var(--display);font-size:19px;line-height:1.45;
+  color:var(--charcoal);margin:0;font-style:italic;font-weight:400;
+  max-width:600px
+}
+
+/* =========================================
+   ENHANCED HOVER STATES
+   ========================================= */
+.servicio{
+  transition:background .22s cubic-bezier(.16,1,.3,1),
+             padding-left .22s cubic-bezier(.16,1,.3,1)
+}
+.servicio:hover{background:var(--paper);padding-left:38px}
+
+.hero-cta{
+  transition:background .25s cubic-bezier(.16,1,.3,1),
+             color .25s ease,
+             transform .2s cubic-bezier(.16,1,.3,1) !important
+}
+.hero-cta:active{transform:scale(.97) !important}
+
+.piece{transition:transform .55s cubic-bezier(.16,1,.3,1) !important}
+.piece:hover{transform:translateY(-5px) !important}
+
+.sys{transition:border-color .22s ease}
+.sys:hover{border-color:var(--terra-ink)}
+
+.paso{transition:background .22s ease}
+.paso:hover{background:rgba(207,168,148,.06)}
+
+/* =========================================
+   FOLIO — plate corner on dark
+   ========================================= */
+.piece.p1::before,.piece.p1::after{border-color:rgba(240,238,233,.3)}
+
+/* TABLET overrides for ep-item */
+@media(max-width:1180px){
+  .ep-item{grid-template-columns:48px 1fr;gap:24px}
+  .ep-num{font-size:38px;text-align:left}
+  .ep-body{font-size:17px;max-width:100%}
+}
+@media(max-width:720px){
+  .ep-item{grid-template-columns:1fr;gap:10px;padding:28px 0}
+  .ep-num{font-size:28px}
+  .ep-icon{width:36px;height:36px}
+  .esencia-pillars{padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#inicio" class="brand">
+      <span class="brand-logo"><img src="assets/brand/logo.svg" alt="CHUCHE Arquitectura"></span>
+      <span class="brand-name">CHUCHE<br><span>ARQUITECTURA</span></span>
+    </a>
+    <nav class="menu">
+      <a href="#statement">§01</a>
+      <a href="#esencia">§02</a>
+      <a href="#capas">§03</a>
+      <a href="#laboratorio">§04</a>
+      <a href="#servicios">§05</a>
+      <a href="#proyectos">§06</a>
+      <a href="#documentacion">§07</a>
+      <a href="#metodo">§08</a>
+      <a href="#contacto">§10</a>
+    </nav>
+    <div class="topbar-contact">
+      <a href="https://instagram.com/chuche_arquitectura" target="_blank" rel="noopener">Instagram</a>
+      <a class="pill" href="https://wa.me/523541171551" target="_blank" rel="noopener">WhatsApp →</a>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <section class="hero plate">
+    <div class="hero-image"></div>
+    <div class="hero-edition">
+      <span class="tech">CHUCHE ARQUITECTURA / ATLAS / VOL. I / 2026</span>
+      <span class="tech">ED. PRIMERA / MICHOACÁN · MX</span>
+    </div>
+    <div class="hero-coords">19°31&prime;05&Prime;N · 102°26&prime;15&Prime;W</div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Atlas editorial · Arquitectura · Territorio · Documentación</p>
+      <p class="hero-tagline">Diseñando el presente, habitando el futuro.</p>
+      <h1>Criterio espacial<br>aplicado <em>al territorio.</em></h1>
+      <div class="hero-meta">
+        <div class="hero-byline">CHUCHE Arquitectura&nbsp;&nbsp;·&nbsp;&nbsp;<span>2022 — 2026</span></div>
+        <div class="hero-right">
+          <div class="hero-stats">
+            <div class="hero-stat"><span class="num">30+</span><span class="lbl">Proyectos</span></div>
+            <div class="hero-stat"><span class="num">07</span><span class="lbl">Sistemas LIB</span></div>
+            <div class="hero-stat"><span class="num">13</span><span class="lbl">Fuentes GIS</span></div>
+          </div>
+          <a class="hero-cta" href="https://wa.me/523541171551" target="_blank" rel="noopener">WhatsApp →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <section class="statement-section" id="statement">
+    <span class="solar-arc r-top"></span>
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§01</span>
+        <span class="eyebrow">Statement</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 01</span>
+      </div>
+      <div class="statement-grid">
+        <div class="statement-meta">
+          <span class="tech">PROYECTO / 2026</span>
+          <span class="tech">COORDINACIÓN</span>
+          <span class="caption">No producimos imágenes</span>
+        </div>
+        <div class="statement-body">
+          <p class="display" data-reveal>Hay una diferencia entre <em>tener propiedades</em> y tener un patrimonio.</p>
+          <p class="statement-tail" data-reveal data-delay="2">Tener propiedades es un hecho administrativo. Tener un patrimonio es una decisión estratégica: cada activo ocupa un lugar en una arquitectura mayor, y las decisiones sobre cualquiera de ellos afectan al sistema completo. Leemos el territorio antes de proyectar. La arquitectura es la consecuencia, no el punto de partida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRIESE SUTIL · isólogo 03 retícula cultural -->
+  <div class="pattern-band" aria-hidden="true"></div>
+
+  <section class="esencia" id="esencia">
+    <span class="solar-arc l-mid sage-c"></span>
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§02</span>
+        <span class="eyebrow">Nuestra esencia</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 02</span>
+      </div>
+      <div class="esencia-head">
+        <h2>Diseñando el presente,<br>habitando el futuro.</h2>
+        <p>Tres capas operativas. Antes de proyectar.</p>
+      </div>
+      <div class="esencia-pillars">
+        <article class="ep-item" data-reveal data-delay="1">
+          <span class="ep-num">01</span>
+          <div class="ep-meta">
+            <div class="ep-icon"><img src="assets/brand/icon-sustentabilidad.svg" alt="Territorio"></div>
+            <span class="ep-tag">Territorio</span>
+          </div>
+          <p class="ep-body">El agua, el suelo y el riesgo son datos de diseño, no restricciones posteriores.</p>
+        </article>
+        <article class="ep-item" data-reveal data-delay="2">
+          <span class="ep-num">02</span>
+          <div class="ep-meta">
+            <div class="ep-icon"><img src="assets/brand/icon-arquitectura.svg" alt="Arquitectura"></div>
+            <span class="ep-tag">Arquitectura</span>
+          </div>
+          <p class="ep-body">Forma que emerge del sitio. Atmósfera material con precisión técnica.</p>
+        </article>
+        <article class="ep-item" data-reveal data-delay="3">
+          <span class="ep-num">03</span>
+          <div class="ep-meta">
+            <div class="ep-icon"><img src="assets/brand/icon-futuro.svg" alt="Memoria"></div>
+            <span class="ep-tag">Memoria</span>
+          </div>
+          <p class="ep-body">Lo que se aprende en cada proyecto queda. No se improvisa dos veces.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="capas lamina-grid" id="capas">
+    <span class="solar-arc r-mid"></span>
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§03</span>
+        <span class="eyebrow">Capas operativas</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 03</span>
+      </div>
+      <div class="capas-grid">
+        <article class="capa k1" data-reveal data-delay="1">
+          <span class="capa-tag">C-01 / Arquitectura</span>
+          <h3 class="capa-name">Arquitectura.</h3>
+          <p class="capa-body">Diseño, proyecto ejecutivo, supervisión y obra documentada. Atmósfera material y precisión técnica.</p>
+        </article>
+        <article class="capa k2" data-reveal data-delay="3">
+          <span class="capa-tag">C-02 / Territorio</span>
+          <h3 class="capa-name">Territorio.</h3>
+          <p class="capa-body">Mapas, lectura de sitio, vocación de suelo, escenarios de oportunidad. GIS aplicado al criterio.</p>
+        </article>
+        <article class="capa k3" data-reveal data-delay="5">
+          <span class="capa-tag">C-03 / Confianza</span>
+          <h3 class="capa-name">Confianza<br>documentada.</h3>
+          <p class="capa-body">WBS, validaciones, entregas, trazabilidad, calidad por LIB, cierre formal. La operación visible.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab has-contours" id="laboratorio">
+    <div class="contour-layer" aria-hidden="true"></div>
+    <span class="solar-arc r-mid"></span>
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§04</span>
+        <span class="eyebrow">Laboratorio territorial</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 04</span>
+      </div>
+      <div class="lab-head">
+        <h2>Leemos territorio<br>antes de proyectar.</h2>
+        <p class="lab-intro">Trece fuentes oficiales cruzadas. No es un mapa. Es la base de cualquier decisión patrimonial seria.</p>
+      </div>
+      <div class="lab-frame">
+        <aside class="lab-side">
+          <div class="lab-layer"><span class="tech">L-01</span><span class="lab-layer-name">Vocación de suelo</span><span class="lab-layer-desc">INEGI USV Serie VII · CONAFOR · SIAP.</span></div>
+          <div class="lab-layer"><span class="tech">L-02</span><span class="lab-layer-name">Hidrografía</span><span class="lab-layer-desc">CONAGUA · INEGI Hidrografía.</span></div>
+          <div class="lab-layer"><span class="tech">L-03</span><span class="lab-layer-name">Infraestructura</span><span class="lab-layer-desc">INEGI Red Nacional de Caminos · SEDATU.</span></div>
+          <div class="lab-layer"><span class="tech">L-04</span><span class="lab-layer-name">Riesgo</span><span class="lab-layer-desc">CENAPRED · CEM.</span></div>
+          <div class="lab-layer"><span class="tech">L-05</span><span class="lab-layer-name">Demografía</span><span class="lab-layer-desc">INEGI ITER 2020 · MGI 2020.</span></div>
+          <div class="lab-layer" style="border-bottom:none"><span class="tech">L-06</span><span class="lab-layer-name">Actividad económica</span><span class="lab-layer-desc">DENUE · OSM Geofabrik.</span></div>
+        </aside>
+        <div class="lab-image-wrap plate">
+          <div class="lab-image"></div>
+          <span class="compass" style="top:18px;right:18px"><span class="compass-cross"></span></span>
+          <div class="lab-image-overlay">
+            <div><span class="tech">FIG. 01 / LECTURA REGIONAL</span><br><span class="lab-image-title">Peribán · Michoacán</span></div>
+            <div class="lab-image-coords">19°31&prime;05&Prime; N<br>102°26&prime;15&Prime; W</div>
+          </div>
+        </div>
+        <div class="lab-data">
+          <div class="lab-row"><span class="lab-k">Capa</span><span class="lab-v">Territorio</span></div>
+          <div class="lab-row"><span class="lab-k">Método</span><span class="lab-v">GIS + Atlas</span></div>
+          <div class="lab-row"><span class="lab-k">Fuentes</span><span class="lab-v">13 oficiales</span></div>
+          <div class="lab-row"><span class="lab-k">Escala</span><span class="lab-v">Regional</span></div>
+          <div class="lab-row"><span class="lab-k">Salida</span><span class="lab-v">Decisión</span></div>
+          <div class="lab-row"><span class="lab-k">Servicio</span><span class="lab-v">Inteligencia territorial</span></div>
+          <div class="scale-bar"><span class="scale-tick"></span><span class="scale-line"></span><span class="scale-tick"></span><span class="tech">0 — 5 km</span></div>
+        </div>
+      </div>
+
+      <!-- ITP 4 CATEGORÍAS ESTRATÉGICAS -->
+      <div class="itp-cats" data-reveal>
+        <div class="itp-cats-head">
+          <span class="eyebrow">ITP · Categorías estratégicas</span>
+          <p>Cada propiedad de un portafolio ocupa una de estas posiciones. La clasificación es viva: cambia conforme el territorio, el capital y el momento del propietario evolucionan.</p>
+        </div>
+        <div class="itp-cats-grid">
+          <div class="itp-cat">
+            <span class="itp-cat-num">01</span>
+            <span class="itp-cat-name">Activación inmediata</span>
+            <p>Contexto favorable, estado físico viable y disposición del propietario alineados. Se interviene ahora porque las condiciones lo permiten.</p>
+          </div>
+          <div class="itp-cat">
+            <span class="itp-cat-num">02</span>
+            <span class="itp-cat-name">Desarrollo programado</span>
+            <p>Activación prevista en horizonte de 3 a 7 años. Requiere preparación: trámites, infraestructura, lectura territorial sostenida.</p>
+          </div>
+          <div class="itp-cat">
+            <span class="itp-cat-num">03</span>
+            <span class="itp-cat-name">Transformación</span>
+            <p>Activos cuyo uso original ya no es viable. Requieren lectura cuidadosa antes de actuar. La decisión más compleja del portafolio.</p>
+          </div>
+          <div class="itp-cat">
+            <span class="itp-cat-num">04</span>
+            <span class="itp-cat-name">Reserva estratégica</span>
+            <p>Aporta más quedándose donde está. No se mueve hasta que las condiciones del territorio o del propietario lo justifiquen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- §06 SERVICIOS -->
+  <section class="servicios" id="servicios">
+    <span class="solar-arc l-mid sage-c"></span>
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§05</span>
+        <span class="eyebrow">Servicios</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 05</span>
+      </div>
+      <div class="servicios-head">
+        <h2>Tres capas.<br>Una relación.</h2>
+        <p class="servicios-sub">La relación profesional que proponemos no se contrata como un servicio puntual. Se acuerda como una relación de varios años, con revisiones periódicas y flexibilidad para ajustar alcance e intensidad conforme el patrimonio evoluciona.</p>
+      </div>
+
+      <!-- CAPA 1: PERMANENTE -->
+      <div class="serv-layer" data-reveal>
+        <span class="serv-layer-tag">Capa permanente · Nunca se interrumpe</span>
+      </div>
+      <ol class="servicios-grid servicios-grid--1col">
+        <li class="servicio servicio--featured" data-reveal><span class="serv-num">01</span><h3>Asesoría territorial y patrimonial continua</h3><p>Lectura sostenida del territorio donde operan sus propiedades. Mantenimiento actualizado del ordenamiento patrimonial. Evaluación de oportunidades que aparecen. Consejo sobre decisiones puntuales que requieren criterio antes que ejecución. Esta capa opera independientemente de si hay obra en proceso o no.</p></li>
+      </ol>
+
+      <!-- CAPA 2: EJECUCIÓN MODULAR -->
+      <div class="serv-layer" data-reveal>
+        <span class="serv-layer-tag">Ejecución modular · Se activa cuando una propiedad entra en intervención</span>
+      </div>
+      <ol class="servicios-grid">
+        <li class="servicio" data-reveal data-delay="1"><span class="serv-num">02</span><h3>Lectura territorial confidencial</h3><p>Primera lectura preliminar del patrimonio o predio. Análisis cruzado de 13 fuentes oficiales: vocación de suelo, hidrología, riesgo, infraestructura, dinámica económica. Base para cualquier propuesta formal posterior.</p></li>
+        <li class="servicio" data-reveal data-delay="2"><span class="serv-num">03</span><h3>Ordenamiento patrimonial</h3><p>De activos dispersos a sistema coherente. Cada propiedad recibe un rol —activación inmediata, desarrollo programado, transformación o reserva estratégica— y una relación funcional con las demás.</p></li>
+        <li class="servicio" data-reveal data-delay="3"><span class="serv-num">04</span><h3>Proyecto integral</h3><p>Conducción completa de una intervención: diseño ejecutivo, documentación técnica y supervisión bajo el mismo criterio patrimonial. Cuando la lectura ya existe y el momento es correcto.</p></li>
+        <li class="servicio" data-reveal data-delay="4"><span class="serv-num">05</span><h3>Proyecto arquitectónico ejecutivo</h3><p>Diseño completo con la documentación técnica necesaria para construir: plantas, cortes, fachadas, especificaciones y memoria. Separado de supervisión cuando el cliente ya tiene constructor.</p></li>
+        <li class="servicio" data-reveal data-delay="5"><span class="serv-num">06</span><h3>Supervisión de obra</h3><p>Calidad por biblioteca LIB, control de cambios, reporte semanal, cierre documentado. Aplicable a obras propias y a obras que otros despachos diseñaron pero que el cliente prefiere supervisar bajo este criterio.</p></li>
+      </ol>
+
+      <!-- CAPA 3: CONSULTA -->
+      <div class="serv-layer" data-reveal>
+        <span class="serv-layer-tag">Consulta específica · Momentos clave que requieren criterio antes que ejecución</span>
+      </div>
+      <ol class="servicios-grid servicios-grid--1col" style="margin-bottom:48px">
+        <li class="servicio" data-reveal><span class="serv-num">07</span><h3>Asesoría puntual</h3><p>Decisión de compra. Evaluación de oportunidad. Segunda opinión sobre proyecto en marcha. Intervención mínima sobre activo existente. Se contrata para un momento, no para una relación.</p></li>
+      </ol>
+
+      <!-- CAPA 4: DESARROLLO -->
+      <div class="serv-layer" data-reveal>
+        <span class="serv-layer-tag">Desarrollo residencial asistido · Para quienes quieren convertir una propiedad en un producto con margen claro</span>
+      </div>
+      <ol class="servicios-grid" style="margin-bottom:104px">
+        <li class="servicio" data-reveal data-delay="1"><span class="serv-num">08</span><h3>Casa como Producto</h3><p>Diagnóstico de viabilidad antes de invertir. Visualización y claridad durante la venta. Control documental y reporte semanal durante la obra. Margen objetivo: 25–35%. Capital típico: $2.2–2.8 M MXN. Salida: 9–12 meses.</p></li>
+        <li class="servicio" data-reveal data-delay="2"><span class="serv-num">09</span><h3>Paquete Llave en Mano</h3><p>Diagnóstico previo, proyecto, supervisión y cierre documentado en un solo encargo. Para agentes inmobiliarios e inversionistas que necesitan control total sin gestionar múltiples proveedores. Proceso claro, comunicación constante, evidencia visual en cada etapa.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="folio" id="proyectos">
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§06</span>
+        <span class="eyebrow">Proyectos · 12 muestras</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 06 / FOLIO</span>
+      </div>
+      <div class="folio-intro">
+        <h2>Cada pieza<br>abre una línea<br>de trabajo.</h2>
+        <p>No son productos. Son criterios aplicados a contextos distintos.</p>
+      </div>
+      <div class="mosaic">
+        <article class="piece p1"><div class="piece-img" style="background-image:url('assets/img/01-gemelo-territorial.jpg')"></div><div class="piece-grad"></div><span class="piece-meta">01 / ITP · TERRITORIO</span><div class="piece-info"><h3>Inteligencia Patrimonial</h3><p>Lectura territorial · Estrategia · Decisión</p></div></article>
+        <article class="piece p2"><div class="piece-img" style="background-image:url('assets/img/02-estudio-hidrico.1.jpg')"></div><div class="piece-grad"></div><span class="piece-meta">02 / AGUA · VIABILIDAD</span><div class="piece-info"><h3>Estudio Hídrico</h3><p>Perforación · Suelo · Decisión</p></div></article>
+        <article class="piece p3"><div class="piece-img" style="background-image:url('assets/img/03-modelo-inversion.jpg')"></div><div class="piece-grad"></div><span class="piece-meta">03 / INVERSIÓN · ANÁLISIS</span><div class="piece-info"><h3>Modelo de Inversión</h3><p>Escenarios · Márgenes · Salidas</p></div></article>
+        <article class="piece p4"><div class="piece-img" style="background-image:url('assets/img/04-usos-mixtos.jpg')"></div><div class="piece-grad"></div><span class="piece-meta">04 / USOS MIXTOS · DESARROLLO</span><div class="piece-info"><h3>Usos Mixtos</h3><p>Activación · Programa · Vehículo de inversión</p></div></article>
+        <article class="piece p5"><div class="piece-img" style="background-image:url('assets/img/05-desarrollo-habitacional.jpg')"></div><div class="piece-grad"></div><span class="piece-meta">05 / HABITACIONAL</span><div class="piece-info"><h3>Desarrollo Habitacional</h3><p>Departamentos · Comunicación</p></div></article>
+        <article class="piece p6"><div class="piece-img" style="background-image:url('assets/img/15- 20251030-RND-CR-09.png')"></div><div class="piece-grad"></div><span class="piece-meta">06 / RESIDENCIAL</span><div class="piece-info"><h3>Arquitectura Residencial</h3><p>Vivienda · Presencia</p></div></article>
+        <article class="piece p7"><div class="piece-img" style="background-image:url('assets/img/07-interiorismo-residencial.jpg')"></div><div class="piece-grad"></div><span class="piece-meta">07 / INTERIOR</span><div class="piece-info"><h3>Interiorismo</h3><p>Atmósfera · Detalle · Luz</p></div></article>
+        <article class="piece p8"><div class="piece-img" style="background-image:url('assets/img/08-diseno-luminico-comercial1.jpg')"></div><div class="piece-grad"></div><span class="piece-meta">08 / RETAIL · LUZ</span><div class="piece-info"><h3>Diseño Lumínico Comercial</h3><p>Luminotecnia · Marca · Espacio</p></div></article>
+        <article class="piece p9"><div class="piece-img" style="background-image:url('assets/img/09-infraestructura-agro.jpg')"></div><div class="piece-grad"></div><span class="piece-meta">09 / AGRO · CAMPO</span><div class="piece-info"><h3>Infraestructura Agro</h3><p>Producción · Permanencia</p></div></article>
+        <article class="piece p10"><div class="piece-img" style="background-image:url('assets/img/06-arquitectura-residencial.jpg');background-position:center 55%"></div><div class="piece-grad"></div><span class="piece-meta">10 / RESIDENCIAL · INVERSIÓN</span><div class="piece-info"><h3>Casa como Producto</h3><p>25–35% margen · 9–12 meses · Control documentado</p></div></article>
+        <article class="piece p11"><div class="piece-img" style="background-image:url('assets/img/11-luz-biofilia.jpg')"></div><div class="piece-grad"></div><span class="piece-meta">11 / BIOFILIA</span><div class="piece-info"><h3>Luz y Biofilia</h3><p>Naturaleza · Calma · Atmósfera</p></div></article>
+        <article class="piece p12"><div class="piece-img" style="background-image:url('assets/img/12-refugio-material.jpg')"></div><div class="piece-grad"></div><span class="piece-meta">12 / REFUGIO</span><div class="piece-info"><h3>Refugio Material</h3><p>Materialidad · Luz · Paisaje</p></div></article>
+        <article class="piece p13"><div class="piece-img" style="background-image:url('assets/img/13-desarrollo-residencial-a.jpg.PNG')"></div><div class="piece-grad"></div><span class="piece-meta">13 / RESIDENCIAL · PROCESO</span><div class="piece-info"><h3>Desarrollo Residencial</h3><p>Detalle · Materialidad · Control</p></div></article>
+        <article class="piece p14"><div class="piece-img" style="background-image:url('assets/img/14-desarrollo-residencial-b.jpg.PNG')"></div><div class="piece-grad"></div><span class="piece-meta">14 / RESIDENCIAL · ENTREGA</span><div class="piece-info"><h3>Proceso Documentado</h3><p>Evidencia visual · Calidad · Cierre</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="docs" id="documentacion">
+    <span class="solar-arc r-bot"></span>
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§07</span>
+        <span class="eyebrow">Documentación · El portafolio invisible</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 07</span>
+      </div>
+      <div class="docs-head">
+        <h2>Coordinar es operar<br>una infraestructura<br>documental.</h2>
+        <p>Coordinar es sostener varios proyectos en paralelo sin perder control. Esto es lo que ya está activo.</p>
+      </div>
+      <div class="docs-grid">
+        <article class="sys s1" data-reveal data-delay="1"><div class="sys-row"><span class="sys-num">07</span><span class="sys-tag">LIB · Calidad</span></div><h3>Biblioteca de calidad</h3><p>Albañilería, acabados detallados, fachadas, pétreos, pintura, pasta y aplanados, tablaroca. Naming determinista <code>LIB-XXX-NNN</code> con tolerancias y criterios de aceptación.</p></article>
+        <article class="sys s2" data-reveal data-delay="2"><div class="sys-row"><span class="sys-num">06</span><span class="sys-tag">SKL · Plantillas</span></div><h3>Templates operacionales</h3><p>Entrevista de diseño, propuesta de supervisión, entrega de proyecto ejecutivo, presupuesto, diario de obra, reporte semanal. Versionado activo.</p></article>
+        <article class="sys s3" data-reveal data-delay="3"><div class="sys-row"><span class="sys-num">03</span><span class="sys-tag">SKL · Protocolos</span></div><h3>Protocolos formales</h3><p>Cobro y cierre de cliente, entrega F4, cobro de honorarios de supervisión. Procedimientos escritos sin ambigüedad cliente-firma.</p></article>
+        <article class="sys s4"><div class="sys-row"><span class="sys-num">13</span><span class="sys-tag">GIS · Cartografía</span></div><h3>Fuentes territoriales</h3><p>INEGI, CONAGUA, CONAFOR, CENAPRED, DENUE, SEDATU, SIAP, OSM y otras. Cruzadas para producir lectura territorial verificable.</p></article>
+        <article class="sys s5"><div class="sys-row"><span class="sys-num">∞</span><span class="sys-tag">Convención · Naming</span></div><h3>Convención de naming</h3><p>Patrón <code>YYYYMMDD_PREFIX_Descriptor_v#.ext</code> aplicado consistentemente. Cada archivo es trazable por fecha, familia y versión.</p></article>
+        <article class="sys s6"><div class="sys-row"><span class="sys-num">01</span><span class="sys-tag">Framework · ITP</span></div><h3>Inteligencia Territorial Patrimonial</h3><p>Framework para clientes con múltiples predios. Lectura → estrategia → activación → arquitectura → cierre. Documentación viva en cada etapa.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- §08.5 DECISIONES — evidencia concreta para el cliente -->
+  <section class="decisiones" id="decisiones">
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§08.5</span>
+        <span class="eyebrow">Decisiones reales</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 08 / EVIDENCIA</span>
+      </div>
+      <div class="dec-intro" data-reveal>
+        <h2>Lecturas que cambiaron<br>decisiones de inversión.</h2>
+        <p>Casos reales. Clientes reales. Sin renders innecesarios.</p>
+      </div>
+      <div class="dec-grid">
+        <article class="dec-case" data-reveal data-delay="1">
+          <div class="dec-case-top">
+            <span class="dec-type">Estudio hídrico · Michoacán</span>
+            <span class="dec-tag">Decisión: Proceder</span>
+          </div>
+          <h3 class="dec-title">227 pozos concesionados en radio 15 km. Pozo más cercano: 471 m. Probabilidad muy alta de localizar agua.</h3>
+          <p class="dec-outcome">El cliente tenía duda sobre viabilidad del predio para uso agro-habitacional. El análisis hídrico cruzado con CONAGUA confirmó factibilidad antes de comprometerse con el proyecto ejecutivo.</p>
+          <div class="dec-meta">
+            <span>FUENTE: CONAGUA · REPDA</span>
+            <span>ESCALA: 15 km radio</span>
+            <span>RESULTADO: Obra iniciada</span>
+          </div>
+        </article>
+        <article class="dec-case" data-reveal data-delay="2">
+          <div class="dec-case-top">
+            <span class="dec-type">Modelo de inversión · Peribán</span>
+            <span class="dec-tag">Decisión: Redirigir</span>
+          </div>
+          <h3 class="dec-title">Predio 213 m² en centro municipal. 6 escenarios evaluados. El uso mixto comercial-habitacional superó en 38% la rentabilidad del uso exclusivamente residencial.</h3>
+          <p class="dec-outcome">El cliente tenía en mente vivienda unifamiliar. El modelo de inversión redirigió el programa hacia uso mixto, multiplicando el retorno sin ampliar el presupuesto inicial.</p>
+          <div class="dec-meta">
+            <span>FUENTE: DENUE · Análisis de mercado local</span>
+            <span>ESCALA: Predio</span>
+            <span>RESULTADO: Proyecto en desarrollo</span>
+          </div>
+        </article>
+        <article class="dec-case" data-reveal data-delay="3">
+          <div class="dec-case-top">
+            <span class="dec-type">Lectura territorial · Michoacán</span>
+            <span class="dec-tag">Decisión: Esperar</span>
+          </div>
+          <h3 class="dec-title">Zona identificada con riesgo hídrico moderado-alto en temporada de lluvias. Inversión pospuesta hasta obtener estudio de vulnerabilidad CENAPRED.</h3>
+          <p class="dec-outcome">A veces la lectura más valiosa es la que detiene una decisión prematura. El cliente ahorró costo de proyecto ejecutivo en un sitio con riesgo no identificado inicialmente.</p>
+          <div class="dec-meta">
+            <span>FUENTE: CENAPRED · CEM</span>
+            <span>ESCALA: Regional</span>
+            <span>RESULTADO: Inversión protegida</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANJA DE PATRÓN ARQUITECTÓNICO · acento editorial -->
+  <div class="pattern-band" aria-hidden="true"></div>
+
+  <section class="metodo lamina-grid" id="metodo">
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§08</span>
+        <span class="eyebrow">Método · Secuencia</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 08</span>
+      </div>
+      <div class="metodo-head" data-reveal>
+        <h2>Una secuencia.<br>No una improvisación.</h2>
+        <p>Cambia la escala. No la disciplina.</p>
+      </div>
+      <ol class="metodo-grid">
+        <li class="paso"><span class="paso-num">01</span><h4>Lectura</h4><p>Del territorio, del sitio, del activo. Antes de proyectar.</p></li>
+        <li class="paso"><span class="paso-num">02</span><h4>Estrategia</h4><p>Decisiones ordenadas bajo un marco compartido.</p></li>
+        <li class="paso"><span class="paso-num">03</span><h4>Proyecto</h4><p>Diseño y ejecutivo documentado, no improvisado.</p></li>
+        <li class="paso"><span class="paso-num">04</span><h4>Documentación</h4><p>Cada decisión, criterio y observación registrada.</p></li>
+        <li class="paso"><span class="paso-num">05</span><h4>Ejecución</h4><p>Supervisión, calidad por LIB, control de cambios.</p></li>
+        <li class="paso"><span class="paso-num">06</span><h4>Cierre</h4><p>Entrega formal, corte de honorarios, cierre documentado.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="final-statement has-topo-dark" id="cita">
+    <div class="topo-layer" aria-hidden="true"></div>
+    <div class="shell">
+      <div>
+        <div class="section-head" style="padding-top:0">
+          <span class="section-num">§09</span>
+          <span class="eyebrow">Método CHUCHE</span>
+        </div>
+      </div>
+      <div data-reveal>
+        <blockquote class="final-blockquote">El objetivo no es vender un proyecto. El objetivo es convertirnos en una capa estratégica de largo plazo en las decisiones territoriales y patrimoniales del cliente.</blockquote>
+        <p class="final-attr">— CHUCHE Arquitectura · Vol. I / 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <span class="solar-arc l-mid sage-c"></span>
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§10</span>
+        <span class="eyebrow">Contacto</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 10 / CIERRE</span>
+      </div>
+      <div class="contacto-grid" data-reveal>
+        <div class="contacto-left">
+          <span class="caption">CHUCHE Arquitectura</span>
+          <h2>Primera lectura<br>territorial.</h2>
+          <p>Confidencial. Sin compromiso. Para propietarios e inversionistas que quieren entender su predio antes de proyectar. Respondo por WhatsApp.</p>
+          <span class="contacto-loc">Michoacán · MX</span>
+        </div>
+        <div class="contacto-right">
+          <a class="contact-row" href="https://wa.me/523541171551" target="_blank" rel="noopener">
+            <span class="lbl">WhatsApp</span>
+            <span class="val">354 117 15 51</span>
+            <span class="arrow">Abrir chat →</span>
+          </a>
+          <a class="contact-row" href="https://instagram.com/chuche_arquitectura" target="_blank" rel="noopener">
+            <span class="lbl">Instagram</span>
+            <span class="val">@chuche_arquitectura</span>
+            <span class="arrow">Ver perfil →</span>
+          </a>
+          <a class="contact-row" href="mailto:chuchearquitectura@gmail.com" target="_blank" rel="noopener">
+            <span class="lbl">Correo</span>
+            <span class="val">chuchearquitectura@gmail.com</span>
+            <span class="arrow">Escribir →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section><!-- /contacto -->
+
+  <!-- COLOÓN -->
+  <footer class="colofon">
+    <div class="colofon-inner">
+      <span class="colofon-brand">CHUCHE Arquitectura</span>
+      <span class="colofon-sep">·</span>
+      <span class="colofon-copy">Atlas Vol. I · 2026</span>
+      <span class="colofon-sep">·</span>
+      <span class="colofon-right">Territorio, Arquitectura, Memoria</span>
+    </div>
+  </footer>
+
+</div><!-- /#root -->
+
+<script>
+(function(){
+  /* ---- SCROLL REVEAL ---- */
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window && revealEls.length){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('is-visible');
+          obs.unobserve(e.target);
+        }
+      });
+    },{threshold:0.12, rootMargin:'0px 0px -56px 0px'});
+    revealEls.forEach(function(el){ obs.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---- TOPBAR SCROLL STATE ---- */
+  var topbar = document.querySelector('header.topbar');
+  if(topbar){
+    window.addEventListener('scroll', function(){
+      topbar.classList.toggle('scrolled', window.scrollY > 36);
+    }, {passive:true});
+  }
+
+  /* ---- MAGNETIC CTA ---- */
+  var cta = document.querySelector('.hero-cta');
+  if(cta){
+    cta.addEventListener('mousemove', function(e){
+      var r = cta.getBoundingClientRect();
+      var dx = (e.clientX - (r.left + r.width/2)) * 0.18;
+      var dy = (e.clientY - (r.top + r.height/2)) * 0.18;
+      cta.style.transform = 'translate('+dx+'px,'+dy+'px) translateY(-2px)';
+    });
+    cta.addEventListener('mouseleave', function(){
+      cta.style.transform = '';
+    });
+  }
+
+  /* ---- FOLIO PIECES STAGGER ---- */
+  var pieces = document.querySelectorAll('.piece');
+  if('IntersectionObserver' in window && pieces.length){
+    var pieceObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var idx = Array.prototype.indexOf.call(pieces, e.target);
+          setTimeout(function(){
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'none';
+          }, (idx % 4) * 80);
+          pieceObs.unobserve(e.target);
+        }
+      });
+    },{threshold:0.08});
+    pieces.forEach(function(p){
+      p.style.opacity = '0';
+      p.style.transform = 'translateY(24px)';
+      p.style.transition = 'opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1)';
+      pieceObs.observe(p);
+    });
+  }
+})();
+</script>
+</body>
+</html>
