@@ -534,10 +534,17 @@ footer.colofon{background:var(--cubierta);color:var(--on-dark);padding:48px 36px
 .dec-meta{display:flex;flex-direction:column;gap:4px;padding-top:14px;border-top:1px dotted var(--line)}
 .dec-meta span{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--mocha)}
 
+.dec-evita{margin-top:48px;padding-top:36px;border-top:1px solid var(--ink)}
+.dec-evita-lead{font-family:var(--display);font-size:clamp(18px,2.2vw,24px);font-style:italic;color:var(--ink);margin:0 0 24px;max-width:680px}
+.dec-evita-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px 48px}
+.dec-evita-list li{font-family:var(--text);font-size:14px;line-height:1.55;color:var(--charcoal);padding-left:22px;position:relative}
+.dec-evita-list li::before{content:'—';position:absolute;left:0;top:0;color:var(--terra-ink);font-weight:600}
+
 @media(max-width:1180px){
   .dec-grid{grid-template-columns:1fr}
   .dec-case{border-right:none;border-bottom:1px solid var(--line-soft)}
   .dec-case:last-child{border-bottom:none}
+  .dec-evita-list{grid-template-columns:1fr;gap:14px}
 }
 
 /* =========================================
@@ -728,11 +735,12 @@ nav.menu a:hover::after{width:100%}
       <a href="#esencia">§02</a>
       <a href="#capas">§03</a>
       <a href="#laboratorio">§04</a>
-      <a href="#servicios">§05</a>
-      <a href="#proyectos">§06</a>
-      <a href="#documentacion">§07</a>
-      <a href="#metodo">§08</a>
-      <a href="#contacto">§10</a>
+      <a href="#decisiones">§05</a>
+      <a href="#servicios">§06</a>
+      <a href="#proyectos">§07</a>
+      <a href="#documentacion">§08</a>
+      <a href="#metodo">§09</a>
+      <a href="#contacto">§11</a>
     </nav>
     <div class="topbar-contact">
       <a href="https://instagram.com/chuche_arquitectura" target="_blank" rel="noopener">Instagram</a>
@@ -785,7 +793,7 @@ nav.menu a:hover::after{width:100%}
           <span class="caption">No empezamos por el render</span>
         </div>
         <div class="statement-body">
-          <p class="display" data-reveal>Hay una diferencia entre <em>tener propiedades</em> y saber qué hacer con ellas.</p>
+          <p class="display" data-reveal>Tener un terreno <em>no siempre significa tener claro</em> cuál es su mejor potencial.</p>
           <p class="statement-tail" data-reveal data-delay="2">No todos los terrenos necesitan lo mismo. Hay lugares donde conviene construir, otros donde primero hay que esperar, y otros donde el error más caro sería avanzar demasiado rápido. Primero entendemos qué está pasando en el terreno. Después vemos qué tiene sentido hacer.</p>
         </div>
       </div>
@@ -823,7 +831,7 @@ nav.menu a:hover::after{width:100%}
             <div class="ep-icon"><img src="assets/brand/icon-arquitectura.svg" alt="Arquitectura"></div>
             <span class="ep-tag">Arquitectura</span>
           </div>
-          <p class="ep-body">El proyecto se construye desde el lugar, no encima de él. Forma con intención y detalle bien resuelto.</p>
+          <p class="ep-body">El proyecto se construye desde el lugar, no encima de él. Cada proyecto responde al lugar, al contexto y a la manera en que va a habitarse.</p>
         </article>
         <article class="ep-item" data-reveal data-delay="3">
           <span class="ep-num">03</span>
@@ -831,7 +839,7 @@ nav.menu a:hover::after{width:100%}
             <div class="ep-icon"><img src="assets/brand/icon-futuro.svg" alt="Memoria"></div>
             <span class="ep-tag">Memoria</span>
           </div>
-          <p class="ep-body">Lo que aprendemos en cada proyecto se queda en cómo trabajamos. No improvisamos dos veces lo mismo.</p>
+          <p class="ep-body">Lo que aprendemos en cada proyecto se queda en cómo trabajamos. Cada proyecto nos ayuda a afinar cómo trabajamos el siguiente.</p>
         </article>
       </div>
     </div>
@@ -878,7 +886,7 @@ nav.menu a:hover::after{width:100%}
       </div>
       <div class="lab-head">
         <h2>Antes de diseñar<br>entendemos el terreno.</h2>
-        <p class="lab-intro">Antes de proponerte nada, revisamos el agua, los riesgos, los accesos, lo que pasa alrededor y qué se puede construir ahí. Diseñar es mucho más fácil cuando ya sabemos contra qué jugamos.</p>
+        <p class="lab-intro">Antes de proponerte nada, revisamos el agua, los riesgos, los accesos, lo que pasa alrededor y qué se puede construir ahí. Las mejores decisiones aparecen cuando primero entendemos bien el terreno y sus límites.</p>
       </div>
       <div class="lab-frame">
         <aside class="lab-side">
@@ -941,14 +949,81 @@ nav.menu a:hover::after{width:100%}
   </section>
 
   <!-- §06 SERVICIOS -->
+  <!-- §08.5 DECISIONES — evidencia concreta para el cliente -->
+  <section class="decisiones" id="decisiones">
+    <div class="shell">
+      <div class="section-head">
+        <span class="section-num">§05</span>
+        <span class="eyebrow">Casos reales</span>
+        <span class="section-rule"></span>
+        <span class="tech">P. 05 / EVIDENCIA</span>
+      </div>
+      <div class="dec-intro" data-reveal>
+        <h2>Entender el terreno<br>les cambió la jugada.</h2>
+        <p>Tres clientes, contextos distintos: uno necesitaba definir dónde perforar, otro evaluar qué podía construirse y otro explorar el potencial de un terreno para desarrollar un modelo económico con más alcance. En los tres casos, el trabajo empezó igual: entender bien el terreno antes de tomar decisiones importantes.</p>
+      </div>
+      <div class="dec-grid">
+        <article class="dec-case" data-reveal data-delay="1">
+          <div class="dec-case-top">
+            <span class="dec-type">Dónde perforar · Michoacán</span>
+            <span class="dec-tag">Estudio de prefactibilidad de agua</span>
+          </div>
+          <h3 class="dec-title">Un terreno de 30 hectáreas y la duda de siempre: ¿dónde abrir el pozo sin perforar a ciegas?</h3>
+          <p class="dec-outcome">Perforar es caro y un pozo seco se paga igual. Cruzamos los datos oficiales de agua de la zona y redujimos esas 30 hectáreas a los puntos con mayor probabilidad de encontrarla. No sustituye el estudio del geólogo, pero reduce la incertidumbre antes de gastar: el cliente perfora donde tiene sentido, no donde cae la suerte. Para un terreno productivo, eso se traduce en riego más seguro y mejores cosechas.</p>
+          <div class="dec-meta">
+            <span>FUENTE: CONAGUA · datos oficiales</span>
+            <span>ZONA: 30 hectáreas</span>
+            <span>RESULTADO: Puntos priorizados para perforación</span>
+          </div>
+        </article>
+        <article class="dec-case" data-reveal data-delay="2">
+          <div class="dec-case-top">
+            <span class="dec-type">Qué construir · Peribán</span>
+            <span class="dec-tag">Análisis de seis escenarios de inversión</span>
+          </div>
+          <h3 class="dec-title">Un terreno de 213 m² puede aprovecharse de muchas formas, y cada una rinde distinto. ¿Cuál conviene?</h3>
+          <p class="dec-outcome">Evaluamos seis escenarios con sus números reales: cuánto invertir, cuánto vuelve, cuánto patrimonio queda y qué riesgo trae cada uno. El dueño los comparó lado a lado y decidió construir cuatro departamentos, vender dos para cubrir la obra y conservar dos rentando, libres de deuda. La decisión fue suya; nuestro trabajo fue darle con qué tomarla.</p>
+          <div class="dec-meta">
+            <span>FUENTE: análisis financiero + mercado local</span>
+            <span>ESCENARIOS: 6 evaluados a detalle</span>
+            <span>RESULTADO: Proyecto en desarrollo</span>
+          </div>
+        </article>
+        <article class="dec-case" data-reveal data-delay="3">
+          <div class="dec-case-top">
+            <span class="dec-type">Desarrollo de usos mixtos · Peribán</span>
+            <span class="dec-tag">Plan maestro por etapas</span>
+          </div>
+          <h3 class="dec-title">12,408 m² en el centro, con todo su valor atrapado: tres escrituras de un mismo terreno y un plano que no coincidía con la realidad.</h3>
+          <p class="dec-outcome">Así, el terreno no se podía escriturar, vender ni construir. Diseñamos un plan maestro que primero ordena lo legal —fusionar las tres escrituras, corregir el polígono— y luego desarrolla el predio por etapas: locales, plaza, cancha y vivienda, donde cada fase financia la siguiente. El dueño vende apenas el 13% para arrancar y conserva el 87% como patrimonio que renta por décadas. Hoy avanza en trámites.</p>
+          <div class="dec-meta">
+            <span>FUENTE: levantamiento + registro público</span>
+            <span>PREDIO: 12,408 m² · conserva 87%</span>
+            <span>RESULTADO: En proceso de escrituras</span>
+          </div>
+        </article>
+      </div>
+      <div class="dec-evita" data-reveal>
+        <p class="dec-evita-lead">Lo que normalmente te ahorras con una buena revisión antes de empezar:</p>
+        <ul class="dec-evita-list">
+          <li>Comprar o construir en un terreno donde no hay agua o no se puede edificar lo que querías.</li>
+          <li>Perforar pozos al azar y gastar en sitios donde no había buena probabilidad de encontrar agua.</li>
+          <li>Tener un terreno parado por años porque las escrituras o los papeles no están en orden.</li>
+          <li>Construir casas cuando el terreno daba para algo que te dejaba más dinero y patrimonio.</li>
+          <li>Que la obra se encarezca a medio camino por algo que nadie revisó al inicio.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="servicios" id="servicios">
     <span class="solar-arc l-mid sage-c"></span>
     <div class="shell">
       <div class="section-head">
-        <span class="section-num">§05</span>
+        <span class="section-num">§06</span>
         <span class="eyebrow">Servicios</span>
         <span class="section-rule"></span>
-        <span class="tech">P. 05</span>
+        <span class="tech">P. 06</span>
       </div>
       <div class="servicios-head">
         <h2>Nos involucramos<br>desde donde haga falta.</h2>
@@ -960,7 +1035,7 @@ nav.menu a:hover::after{width:100%}
         <span class="serv-layer-tag">Para tenerme cerca todo el tiempo</span>
       </div>
       <ol class="servicios-grid servicios-grid--1col">
-        <li class="servicio servicio--featured" data-reveal><span class="serv-num">01</span><h3>Te acompaño con tus propiedades</h3><p>Para dueños que quieren tener siempre claro qué hacer con sus terrenos. Voy siguiendo cómo se mueve la zona, mantengo tus propiedades ordenadas y te aviso cuando aparece una oportunidad o una decisión que conviene pensar bien. Estés construyendo o no.</p></li>
+        <li class="servicio servicio--featured" data-reveal><span class="serv-num">01</span><h3>Te acompaño con tus propiedades</h3><p><strong>Para que no se te pase una oportunidad ni tomes una mala decisión por no tener a quién preguntarle.</strong> Voy siguiendo cómo se mueve la zona, mantengo tus terrenos ordenados y te aviso cuando algo conviene revisar. Estés construyendo o no.</p></li>
       </ol>
 
       <!-- CAPA 2: EJECUCIÓN MODULAR -->
@@ -968,11 +1043,11 @@ nav.menu a:hover::after{width:100%}
         <span class="serv-layer-tag">Cuando hay que diseñar o construir</span>
       </div>
       <ol class="servicios-grid">
-        <li class="servicio" data-reveal data-delay="1"><span class="serv-num">02</span><h3>Revisamos tu terreno</h3><p>Antes de que gastes tiempo o dinero, revisamos el terreno a fondo: si hay agua, qué riesgos tiene, cómo se llega y qué pasa alrededor. Cruzamos 13 fuentes oficiales. Es el punto de partida de cualquier cosa que hagamos después.</p></li>
-        <li class="servicio" data-reveal data-delay="2"><span class="serv-num">03</span><h3>Ordenamos tus propiedades</h3><p>Si tienes varias propiedades sueltas, te ayudo a verlas como un conjunto. A cada una le ponemos un para qué —avanzar ya, preparar, cambiarle el uso o dejarla quieta— para que sepas qué mover primero y qué no.</p></li>
-        <li class="servicio" data-reveal data-delay="3"><span class="serv-num">04</span><h3>Hago todo el proyecto</h3><p>Diseño, planos y supervisión de obra, todo conmigo al frente. Para cuando ya entendimos el terreno y es el momento de construir.</p></li>
-        <li class="servicio" data-reveal data-delay="4"><span class="serv-num">05</span><h3>Solo los planos</h3><p>El proyecto completo listo para construir: planos, fachadas, detalles y todo lo que tu constructor necesita. Para cuando ya tienes con quién construir.</p></li>
-        <li class="servicio" data-reveal data-delay="5"><span class="serv-num">06</span><h3>Cuido tu obra</h3><p>Voy a la obra, reviso que todo salga bien, controlo los cambios y te paso un reporte cada semana. Aunque el proyecto lo haya hecho otro.</p></li>
+        <li class="servicio" data-reveal data-delay="1"><span class="serv-num">02</span><h3>Revisamos tu terreno</h3><p><strong>Para que no compres ni construyas en un terreno que después te dé problemas caros.</strong> Antes de que gastes tiempo o dinero, revisamos si hay agua, qué riesgos tiene, cómo se llega y qué pasa alrededor. Cruzamos 13 fuentes oficiales. Si algo no cuadra, lo sabes a tiempo.</p></li>
+        <li class="servicio" data-reveal data-delay="2"><span class="serv-num">03</span><h3>Ordenamos tus propiedades</h3><p><strong>Para que dejes de tener terrenos parados sin saber cuál mover primero.</strong> Si tienes varias propiedades sueltas, te ayudo a verlas como un conjunto y a cada una le ponemos un para qué: avanzar ya, preparar, cambiarle el uso o dejarla quieta. Sabes en qué enfocarte y en qué no perder dinero.</p></li>
+        <li class="servicio" data-reveal data-delay="3"><span class="serv-num">04</span><h3>Hago todo el proyecto</h3><p><strong>Para que no andes coordinando por tu cuenta a diseñador, dibujante y constructor.</strong> Diseño, planos y supervisión de obra, todo conmigo al frente y respondiendo por el resultado. Una sola persona a quién pedirle cuentas.</p></li>
+        <li class="servicio" data-reveal data-delay="4"><span class="serv-num">05</span><h3>Solo los planos</h3><p><strong>Para que tu constructor no improvise y la obra no se encarezca a media construcción.</strong> El proyecto completo y bien definido: planos, fachadas, detalles y todo lo que se necesita para construir sin sorpresas. Para cuando ya tienes con quién.</p></li>
+        <li class="servicio" data-reveal data-delay="5"><span class="serv-num">06</span><h3>Cuido tu obra</h3><p><strong>Para que no te enteres de los errores cuando ya están hechos y cuesta caro deshacerlos.</strong> Voy a la obra, reviso que todo salga bien, controlo los cambios y te paso un reporte cada semana. Aunque el proyecto lo haya hecho otro.</p></li>
       </ol>
 
       <!-- CAPA 3: CONSULTA -->
@@ -980,7 +1055,7 @@ nav.menu a:hover::after{width:100%}
         <span class="serv-layer-tag">Cuando solo necesitas una opinión</span>
       </div>
       <ol class="servicios-grid servicios-grid--1col" style="margin-bottom:48px">
-        <li class="servicio" data-reveal><span class="serv-num">07</span><h3>Una consulta rápida</h3><p>Cuando solo necesitas claridad antes de decidir algo importante: comprar un terreno, ver si una oportunidad vale la pena, o una segunda opinión sobre un proyecto que ya tienes en marcha. Es para un momento puntual, no un compromiso largo.</p></li>
+        <li class="servicio" data-reveal><span class="serv-num">07</span><h3>Una consulta rápida</h3><p><strong>Para que no tomes una decisión de cientos de miles de pesos a ciegas.</strong> Cuando solo necesitas una opinión clara antes de algo importante: comprar un terreno, ver si una oportunidad vale la pena, o revisar un proyecto que ya tienes en marcha. Es para un momento, no un compromiso largo.</p></li>
       </ol>
 
       <!-- CAPA 4: DESARROLLO -->
@@ -988,8 +1063,8 @@ nav.menu a:hover::after{width:100%}
         <span class="serv-layer-tag">Cuando quieres que una casa te deje dinero</span>
       </div>
       <ol class="servicios-grid" style="margin-bottom:104px">
-        <li class="servicio" data-reveal data-delay="1"><span class="serv-num">08</span><h3>Casa como Producto</h3><p>Una casa pensada como inversión desde el día uno. Reviso si el negocio cierra antes de que inviertas, te doy material claro para vender y te paso reporte cada semana en la obra. Margen que buscamos: 25–35%. Lo que se invierte: $2.2–2.8 M MXN. Tiempo: 9–12 meses.</p></li>
-        <li class="servicio" data-reveal data-delay="2"><span class="serv-num">09</span><h3>Llave en Mano</h3><p>Yo coordino todo de principio a fin: la revisión, el proyecto, la obra y el cierre. Para agentes e inversionistas que quieren el control sin andar persiguiendo a cinco proveedores distintos. Todo claro y con fotos del avance en cada etapa.</p></li>
+        <li class="servicio" data-reveal data-delay="1"><span class="serv-num">08</span><h3>Casa como Producto</h3><p><strong>Para que no inviertas en una casa para revender sin saber si vas a ganar.</strong> Reviso si el negocio cierra antes de que pongas un peso, te doy material claro para vender y te paso reporte cada semana en obra. Margen que buscamos: 25–35%. Lo que se invierte: $2.2–2.8 M MXN. Tiempo: 9–12 meses.</p></li>
+        <li class="servicio" data-reveal data-delay="2"><span class="serv-num">09</span><h3>Llave en Mano</h3><p><strong>Para que no pierdas tiempo persiguiendo a cinco proveedores distintos.</strong> Yo coordino todo de principio a fin: la revisión, el proyecto, la obra y el cierre. Para agentes e inversionistas que quieren el control sin meterse al detalle. Con fotos del avance en cada etapa.</p></li>
       </ol>
     </div>
   </section>
@@ -997,10 +1072,10 @@ nav.menu a:hover::after{width:100%}
   <section class="folio" id="proyectos">
     <div class="shell">
       <div class="section-head">
-        <span class="section-num">§06</span>
+        <span class="section-num">§07</span>
         <span class="eyebrow">Proyectos · 12 muestras</span>
         <span class="section-rule"></span>
-        <span class="tech">P. 06 / FOLIO</span>
+        <span class="tech">P. 07 / FOLIO</span>
       </div>
       <div class="folio-intro">
         <h2>Cada proyecto<br>resolvió algo<br>distinto.</h2>
@@ -1029,10 +1104,10 @@ nav.menu a:hover::after{width:100%}
     <span class="solar-arc r-bot"></span>
     <div class="shell">
       <div class="section-head">
-        <span class="section-num">§07</span>
+        <span class="section-num">§08</span>
         <span class="eyebrow">Documentación · El orden detrás de la obra</span>
         <span class="section-rule"></span>
-        <span class="tech">P. 07</span>
+        <span class="tech">P. 08</span>
       </div>
       <div class="docs-head">
         <h2>La obra también<br>necesita orden.</h2>
@@ -1049,62 +1124,6 @@ nav.menu a:hover::after{width:100%}
     </div>
   </section>
 
-  <!-- §08.5 DECISIONES — evidencia concreta para el cliente -->
-  <section class="decisiones" id="decisiones">
-    <div class="shell">
-      <div class="section-head">
-        <span class="section-num">§08.5</span>
-        <span class="eyebrow">Decisiones reales</span>
-        <span class="section-rule"></span>
-        <span class="tech">P. 08 / EVIDENCIA</span>
-      </div>
-      <div class="dec-intro" data-reveal>
-        <h2>Casos donde entender el<br>terreno cambió la decisión.</h2>
-        <p>A veces la mejor decisión es avanzar. Y a veces es detenerse a tiempo. Clientes reales, casos reales.</p>
-      </div>
-      <div class="dec-grid">
-        <article class="dec-case" data-reveal data-delay="1">
-          <div class="dec-case-top">
-            <span class="dec-type">Estudio hídrico · Michoacán</span>
-            <span class="dec-tag">Decisión: Proceder</span>
-          </div>
-          <h3 class="dec-title">227 pozos concesionados en radio 15 km. Pozo más cercano: 471 m. Probabilidad muy alta de localizar agua.</h3>
-          <p class="dec-outcome">El cliente no sabía si el terreno servía para vivienda y campo a la vez. Revisar los datos de CONAGUA confirmó que sí había agua, antes de gastar en el proyecto. Avanzó tranquilo.</p>
-          <div class="dec-meta">
-            <span>FUENTE: CONAGUA · REPDA</span>
-            <span>ESCALA: 15 km radio</span>
-            <span>RESULTADO: Obra iniciada</span>
-          </div>
-        </article>
-        <article class="dec-case" data-reveal data-delay="2">
-          <div class="dec-case-top">
-            <span class="dec-type">Modelo de inversión · Peribán</span>
-            <span class="dec-tag">Decisión: Redirigir</span>
-          </div>
-          <h3 class="dec-title">Terreno de 213 m² en el centro. Comparamos 6 formas de aprovecharlo. Mezclar comercio y vivienda dejaba 38% más que solo casas.</h3>
-          <p class="dec-outcome">El cliente pensaba en una casa para vivir. Al ver los números, el uso mixto rendía mucho más, sin gastar más. Cambió el plan a tiempo.</p>
-          <div class="dec-meta">
-            <span>FUENTE: DENUE · Análisis de mercado local</span>
-            <span>ESCALA: Predio</span>
-            <span>RESULTADO: Proyecto en desarrollo</span>
-          </div>
-        </article>
-        <article class="dec-case" data-reveal data-delay="3">
-          <div class="dec-case-top">
-            <span class="dec-type">Lectura del terreno · Michoacán</span>
-            <span class="dec-tag">Decisión: Esperar</span>
-          </div>
-          <h3 class="dec-title">Zona identificada con riesgo hídrico moderado-alto en temporada de lluvias. Inversión pospuesta hasta obtener estudio de vulnerabilidad CENAPRED.</h3>
-          <p class="dec-outcome">A veces lo más valioso es frenar a tiempo. Detectamos un riesgo que nadie había visto y el cliente se ahorró gastar en un proyecto sobre un sitio problemático.</p>
-          <div class="dec-meta">
-            <span>FUENTE: CENAPRED · CEM</span>
-            <span>ESCALA: Regional</span>
-            <span>RESULTADO: Inversión protegida</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <!-- FRANJA DE PATRÓN ARQUITECTÓNICO · acento editorial -->
   <div class="pattern-band" aria-hidden="true"></div>
@@ -1112,10 +1131,10 @@ nav.menu a:hover::after{width:100%}
   <section class="metodo lamina-grid" id="metodo">
     <div class="shell">
       <div class="section-head">
-        <span class="section-num">§08</span>
+        <span class="section-num">§09</span>
         <span class="eyebrow">Método · Secuencia</span>
         <span class="section-rule"></span>
-        <span class="tech">P. 08</span>
+        <span class="tech">P. 09</span>
       </div>
       <div class="metodo-head" data-reveal>
         <h2>Trabajamos<br>paso por paso.</h2>
@@ -1123,11 +1142,11 @@ nav.menu a:hover::after{width:100%}
       </div>
       <ol class="metodo-grid">
         <li class="paso"><span class="paso-num">01</span><h4>Entender el sitio</h4><p>El terreno, el contexto y la propiedad. Antes de diseñar nada.</p></li>
-        <li class="paso"><span class="paso-num">02</span><h4>Decidir con claridad</h4><p>Qué conviene hacer y qué no, con todo sobre la mesa.</p></li>
+        <li class="paso"><span class="paso-num">02</span><h4>Decidir con claridad</h4><p>Evaluamos escenarios, alcances y posibilidades antes de avanzar.</p></li>
         <li class="paso"><span class="paso-num">03</span><h4>Diseñar el proyecto</h4><p>El diseño y los planos para construir, bien resueltos.</p></li>
         <li class="paso"><span class="paso-num">04</span><h4>Orden y seguimiento</h4><p>Cada decisión y cambio queda registrado durante el camino.</p></li>
         <li class="paso"><span class="paso-num">05</span><h4>Supervisar la obra</h4><p>Seguimiento en sitio, control de cambios y calidad.</p></li>
-        <li class="paso"><span class="paso-num">06</span><h4>Cerrar bien</h4><p>Entrega formal y cierre documentado. Sin cabos sueltos.</p></li>
+        <li class="paso"><span class="paso-num">06</span><h4>Cerrar bien</h4><p>Entrega formal y cierre documentado. Con seguimiento claro y todo documentado en cada etapa.</p></li>
       </ol>
     </div>
   </section>
@@ -1137,7 +1156,7 @@ nav.menu a:hover::after{width:100%}
     <div class="shell">
       <div>
         <div class="section-head" style="padding-top:0">
-          <span class="section-num">§09</span>
+          <span class="section-num">§10</span>
           <span class="eyebrow">Método CHUCHE</span>
         </div>
       </div>
@@ -1152,10 +1171,10 @@ nav.menu a:hover::after{width:100%}
     <span class="solar-arc l-mid sage-c"></span>
     <div class="shell">
       <div class="section-head">
-        <span class="section-num">§10</span>
+        <span class="section-num">§11</span>
         <span class="eyebrow">Contacto</span>
         <span class="section-rule"></span>
-        <span class="tech">P. 10 / CIERRE</span>
+        <span class="tech">P. 11 / CIERRE</span>
       </div>
       <div class="contacto-grid" data-reveal>
         <div class="contacto-left">
@@ -1196,7 +1215,7 @@ nav.menu a:hover::after{width:100%}
     </div>
   </footer>
 
-</div><!-- /#root -->
+</main><!-- /#inicio -->
 
 <script>
 (function(){
